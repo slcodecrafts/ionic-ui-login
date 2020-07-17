@@ -41,17 +41,25 @@
 }
 
 .my-custom-login-modal-css .modal-wrapper {
-    height: 50%;
-    top: 50%;
+    height: 60%;
+    top: 40%;
     position: absolute; 
     display: block;
     border-radius: 20px 20px 0 0;
- }
+}
 
- .primary-input {
+.my-custom-register-modal-css .modal-wrapper {
+    height: 70%;
+    top: 30%;
+    position: absolute; 
+    display: block;
+    border-radius: 20px 20px 0 0;
+}
+
+.primary-input {
     background: aliceblue;
     --padding-start: 10px !important;
     color: #999999;
     border-radius: 5px;
     margin-bottom: 10px;
- }
+}
