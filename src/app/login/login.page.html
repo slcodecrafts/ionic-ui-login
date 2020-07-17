@@ -3,4 +3,15 @@
     <h4>Login</h4>
     <p>Lets get started</p>
   </div>
+
+  <ion-input placeholder="Username" class="primary-input"></ion-input>
+  <ion-input placeholder="Password" class="primary-input"></ion-input>
+
+  <div class="ion-margin-top">
+    <ion-button expand="block" class="ion-margin-top" (click)="login()">LOGIN</ion-button>
+  </div>
+
+  <div class="ion-margin-top ion-text-center">
+    <a (click)="dismiss()">Close</a>
+  </div>
 </ion-content>
