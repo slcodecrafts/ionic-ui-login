@@ -3,6 +3,7 @@ import { ModalController } from '@ionic/angular';
 import { LoginPage } from '../login/login.page';
 import { RegisterPage } from '../register/register.page';
 import { LanguagePage } from '../language/language.page';
+import { LangService } from '../lang.service';
 
 @Component({
   selector: 'app-welcome',
@@ -14,12 +15,17 @@ export class WelcomePage implements OnInit {
 
   constructor(
     public modalCtrl: ModalController,
+    private langService: LangService,
   ) { }
 
   ngOnInit() {
     let lng = localStorage.getItem('lng');
 
     this.language = (lng == 'en') ? 'English':'Arabic';
+
+    this.langService.getLanguage().subscribe((data) => {
+      this.language = (data == 'en') ? 'English':'Arabic';
+    });
   }
 
   async login() {

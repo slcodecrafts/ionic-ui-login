@@ -28,10 +28,11 @@ export class AppComponent {
       this.splashScreen.hide();
 
       let lng = localStorage.getItem('lng');
-      if (lng) {
+      console.log("def Lang", lng);
+      if (!lng) {
+        localStorage.setItem('lng', 'en');
         this.lang.setDefaultLang();
       } else {
-        localStorage.setItem('lng', 'en');
         this.lang.changeLang(lng);
       }
     });
