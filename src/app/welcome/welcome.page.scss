@@ -10,3 +10,19 @@
 .title p {
     margin-top: 0 !important;
 }
+
+.lang {
+    margin-top: 40px;
+    font-size: small;
+}
+
+.lang p {
+    margin-bottom: 0;
+}
+
+.lang ion-badge {
+    background: #00000045;
+    border-radius: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}

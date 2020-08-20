@@ -4,6 +4,7 @@ import { Platform } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { TranslateService } from '@ngx-translate/core';
+import { LangService } from './lang.service';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,8 @@ export class AppComponent {
     private platform: Platform,
     private splashScreen: SplashScreen,
     private statusBar: StatusBar,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private lang: LangService,
   ) {
     this.initializeApp();
   }
@@ -25,7 +27,13 @@ export class AppComponent {
       this.statusBar.backgroundColorByHexString('#ee4659');
       this.splashScreen.hide();
 
-      this.translate.setDefaultLang('ar');
+      let lng = localStorage.getItem('lng');
+      if (lng) {
+        this.lang.setDefaultLang();
+      } else {
+        localStorage.setItem('lng', 'en');
+        this.lang.changeLang(lng);
+      }
     });
   }
 }

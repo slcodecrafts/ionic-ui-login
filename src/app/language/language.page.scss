@@ -1,0 +1,23 @@
+.title {
+    margin-bottom: 30px;
+}
+
+.title p {
+    margin-top: 0 !important;
+    color: #999999;
+    font-size: small;
+}
+
+.flags img {
+    width: 60px;
+}
+
+.selected {
+    background: var(--ion-color-primary);
+    border-radius: 50%;
+}
+
+.flags img:visited {
+    background: var(--ion-color-primary);
+    border-radius: 50%;
+}
