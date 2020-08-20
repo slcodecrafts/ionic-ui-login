@@ -8,26 +8,33 @@ import { Subject } from 'rxjs';
 export class LangService {
 
   private language = new Subject<any>();
+  private direction = new Subject<any>();
+
+  dir = 'ltr';
 
   constructor(
     private translate: TranslateService,
   ) { }
 
   setDefaultLang() {
-    console.log("Setting def lang")
     this.translate.setDefaultLang('en');
     this.language.next('en');
+    this.direction.next('ltr');
   }
 
-  changeLang(lng) {
-    console.log("Changing def lang", lng)
-
+  changeLang(lng, dir) {
     this.translate.setDefaultLang(lng);
     localStorage.setItem('lng', lng);
+    localStorage.setItem('dir', dir);
     this.language.next(lng);
+    this.direction.next(dir);
   }
 
   getLanguage(): Subject<any> {
     return this.language;
+  }
+
+  getDirection(): Subject<any> {
+    return this.direction;
   }
 }

@@ -7,16 +7,16 @@
 
   <div class="title">
     <h2>{{ 'welcome' | translate }}</h2>
-    <p>Enjoy the code crafts app</p>
+    <p>{{ 'sub_title' | translate }}</p>
   </div>
 
   <div class="ion-margin-top">
-    <ion-button expand="block" class="ion-margin-top" fill="outline" (click)="register()" color="white">SIGN UP</ion-button>
-    <ion-button expand="block" class="ion-margin-top" color="white" (click)="login()">LOGIN</ion-button>
+    <ion-button expand="block" class="ion-margin-top" fill="outline" (click)="register()" color="white">{{ 'sign_up' | translate }}</ion-button>
+    <ion-button expand="block" class="ion-margin-top" color="white" (click)="login()">{{ 'login' | translate }}</ion-button>
   </div>
 
   <div class="lang ion-text-center">
-    <p>Language</p>
+    <p>{{ 'language' | translate }}</p>
     <ion-badge color="dark" (click)="lang()">{{ language }}</ion-badge>
   </div>
 </ion-content>

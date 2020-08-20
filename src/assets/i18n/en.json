@@ -7,5 +7,9 @@
     "login_sub_title": "Lets get started",
     "forget_password": "Forget password?",
     "close": "Close",
-    "terms": "By signing up you're agreed to our Terms & Conditions"
+    "terms": "By signing up you're agreed to our Terms & Conditions",
+    "language": "Language",
+    "get_started": "Lets get started",
+    "username": "Username",
+    "password": "Password"
 }

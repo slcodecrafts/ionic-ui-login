@@ -20,9 +20,9 @@ export class LanguagePage implements OnInit {
     this.lng = localStorage.getItem('lng');
   }
 
-  toggleLanguage(lng) {
+  toggleLanguage(lng, dir) {
     this.lng = lng;
-    this.lang.changeLang(lng);
+    this.lang.changeLang(lng, dir);
   }
 
   async dismiss() {
